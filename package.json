@@ -1,7 +1,7 @@
 {
   "name": "common-log-format",
   "author": "Lloyd Brookes <75pound@gmail.com>",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A transform stream, converting common log format to JSON",
   "repository": "https://github.com/75lb/common-log-format.git",
   "main": "./lib/common-log-format.js",
