@@ -11,11 +11,11 @@ test("connect default", function(t){
             remoteHost: "127.0.0.1",
             remoteLogName: "-",
             authUser: "-",
-            date: null,
+            date: "2014-06-11T15:51:48.000Z",
             request: "GET /package.json HTTP/1.1",
             status: 200,
             bytes: 733
         });
     });
-    transform.write('127.0.0.1 - - [11/5/2014:15:55:55 +0100] "GET /package.json HTTP/1.1" 200 733 "http://localhost:8000/" "userAgent"');
+    transform.write('127.0.0.1 - - [Wed, 11 Jun 2014 15:51:48 GMT] "GET /package.json HTTP/1.1" 200 733 "http://localhost:8000/" "userAgent"');
 });
