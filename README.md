@@ -37,5 +37,5 @@ $ npm install -g common-log-format
 
 ```sh
 $ cat my-web-log.txt | clf
-{"remoteHost":"127.0.0.1","remoteLogName":"-","authUser":"-","date":"2014-06-11T16:05:26.000Z","request":"GET /package.json HTTP/1.1","status":200,"bytes":733}{"remoteHost":"127.0.0.1","remoteLogName":"-","authUser":"-","date":"2014-06-11T16:05:26.000Z","request":"GET /package.json HTTP/1.1","status":200,"bytes":733}{"remoteHost":"127.0.0.1","remoteLogName":"-","authUser":"-","date":"2014-06-11T16:05:26.000Z","request":"GET /package.json HTTP/1.1","status":200,"bytes":733}{"remoteHost":"127.0.0.1","remoteLogName":"-","authUser":"-","date":"2014-06-11T16:05:27.000Z","request":"GET /package.json HTTP/1.1","status":200,"bytes":733}{"remoteHost":"127.0.0.1","remoteLogName":"-","authUser":"-","date":"2014-06-11T16:05:27.000Z","request":"GET /package.json HTTP/1.1","status":200,"bytes":733}
+{"remoteHost":"127.0.0.1","remoteLogName":"-","authUser":"-","date":"2014-06-11T16:05:26.000Z","request":"GET /package.json HTTP/1.1","status":200,"bytes":733}
 ```
