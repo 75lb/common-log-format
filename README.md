@@ -2,6 +2,7 @@
 [![npm module downloads](http://img.shields.io/npm/dt/common-log-format.svg)](https://www.npmjs.org/package/common-log-format)
 [![Build Status](https://travis-ci.org/75lb/common-log-format.svg?branch=master)](https://travis-ci.org/75lb/common-log-format)
 [![Dependency Status](https://david-dm.org/75lb/common-log-format.svg)](https://david-dm.org/75lb/common-log-format)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 # common-log-format
 Pipe in [common log format](http://en.wikipedia.org/wiki/Common_Log_Format), get JSON out. Useful for converting web logs into a format more readily consumed by Javascript.
@@ -42,8 +43,8 @@ $ npm install common-log-format
 ```
 
 ```js
-var clf = require("common-log-format");
-process.stdin.pipe(clf()).pipe(process.stdout);
+const clf = require('common-log-format')
+process.stdin.pipe(clf()).pipe(process.stdout)
 ```
 
 ### Command line
