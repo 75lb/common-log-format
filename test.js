@@ -37,9 +37,7 @@ tom.test('two writes', async function () {
   transform.write('127.0.0.1 - - [Wed, 11 Jun 2014 15:51:48 GMT] "GET /package.json HTTP/1.1" 200 733 "http://localhost:8000/" "userAgent"')
   transform.write('127.0.0.2 - - [Wed, 11 Jun 2014 15:51:48 GMT] "GET /package.json HTTP/1.1" 200 733 "http://localhost:8000/" "userAgent"')
   await sleep(10)
-  a.deepStrictEqual(actuals, [
-    '{"remoteHost":"127.0.0.1","remoteLogName":"-","authUser":"-","date":"2014-06-11T15:51:48.000Z","request":"GET /package.json HTTP/1.1","status":200,"bytes":733}{"remoteHost":"127.0.0.2","remoteLogName":"-","authUser":"-","date":"2014-06-11T15:51:48.000Z","request":"GET /package.json HTTP/1.1","status":200,"bytes":733}'
-  ])
+  a.deepStrictEqual(actuals.join(''), '{"remoteHost":"127.0.0.1","remoteLogName":"-","authUser":"-","date":"2014-06-11T15:51:48.000Z","request":"GET /package.json HTTP/1.1","status":200,"bytes":733}{"remoteHost":"127.0.0.2","remoteLogName":"-","authUser":"-","date":"2014-06-11T15:51:48.000Z","request":"GET /package.json HTTP/1.1","status":200,"bytes":733}')
 })
 
 tom.test('non-numeric bytes', async function () {
