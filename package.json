@@ -4,7 +4,6 @@
   "version": "0.1.4",
   "description": "Transform web logs (common log format) to JSON",
   "repository": "https://github.com/75lb/common-log-format.git",
-  "main": "./lib/common-log-format.js",
   "license": "MIT",
   "bin": {
     "clf": "bin/cli.js"
@@ -19,12 +18,17 @@
     "transform"
   ],
   "engines": {
-    "node": ">=0.10.0 <9.0.0"
+    "node": ">=8"
   },
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "test-runner test.js"
   },
   "devDependencies": {
-    "tape": "^4.2.2"
-  }
+    "sleep-anywhere": "^1.1.2",
+    "test-runner": "^0.6.0"
+  },
+  "files": [
+    "index.js",
+    "bin/cli.js"
+  ]
 }

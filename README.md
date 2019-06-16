@@ -1,10 +1,11 @@
-[![view on npm](http://img.shields.io/npm/v/common-log-format.svg)](https://www.npmjs.org/package/common-log-format)
-[![npm module downloads](http://img.shields.io/npm/dt/common-log-format.svg)](https://www.npmjs.org/package/common-log-format)
+[![view on npm](https://img.shields.io/npm/v/common-log-format.svg)](https://www.npmjs.org/package/common-log-format)
+[![npm module downloads](https://img.shields.io/npm/dt/common-log-format.svg)](https://www.npmjs.org/package/common-log-format)
 [![Build Status](https://travis-ci.org/75lb/common-log-format.svg?branch=master)](https://travis-ci.org/75lb/common-log-format)
-[![Dependency Status](https://david-dm.org/75lb/common-log-format.svg)](https://david-dm.org/75lb/common-log-format)
+[![Dependency Status](https://badgen.net/david/dep/75lb/common-log-format)](https://david-dm.org/75lb/common-log-format)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 # common-log-format
+
 Pipe in [common log format](http://en.wikipedia.org/wiki/Common_Log_Format), get JSON out. Useful for converting web logs into a format more readily consumed by Javascript.
 
 Standard log input such as:
@@ -37,7 +38,9 @@ would be converted to
 ```
 
 ## Usage
+
 ### As a library
+
 ```sh
 $ npm install common-log-format
 ```
@@ -48,7 +51,9 @@ process.stdin.pipe(clf()).pipe(process.stdout)
 ```
 
 ### Command line
+
 This will install the `clf` command line tool:
+
 ```sh
 $ npm install -g common-log-format
 ```
@@ -57,3 +62,7 @@ $ npm install -g common-log-format
 $ cat my-web-log.txt | clf
 {"remoteHost":"127.0.0.1","remoteLogName":"-","authUser":"-","date":"2014-06-11T16:05:26.000Z","request":"GET /package.json HTTP/1.1","status":200,"bytes":733}
 ```
+
+* * *
+
+&copy; 2015-2019 Lloyd Brookes \<75pound@gmail.com\>.

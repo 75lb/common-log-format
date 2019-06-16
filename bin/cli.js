@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-"use strict";
 
-var clf = require("../");
+const clf = require('../')
 
-process.stdin.pipe(clf()).pipe(process.stdout);
+process.stdin.pipe(clf()).pipe(process.stdout)
