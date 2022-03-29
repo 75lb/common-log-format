@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-const clf = require('common-log-format')
+const Clf = require('common-log-format')
 
-process.stdin.pipe(clf()).pipe(process.stdout)
+process.stdin.pipe(new Clf()).pipe(process.stdout)

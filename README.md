@@ -3,7 +3,6 @@
 [![Gihub repo dependents](https://badgen.net/github/dependents-repo/75lb/common-log-format)](https://github.com/75lb/common-log-format/network/dependents?dependent_type=REPOSITORY)
 [![Gihub package dependents](https://badgen.net/github/dependents-pkg/75lb/common-log-format)](https://github.com/75lb/common-log-format/network/dependents?dependent_type=PACKAGE)
 [![Node.js CI](https://github.com/75lb/common-log-format/actions/workflows/node.js.yml/badge.svg)](https://github.com/75lb/common-log-format/actions/workflows/node.js.yml)
-[![Coverage Status](https://coveralls.io/repos/github/75lb/common-log-format/badge.svg)](https://coveralls.io/github/75lb/common-log-format)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 # common-log-format
