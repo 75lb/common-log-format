@@ -1,12 +1,14 @@
-[![view on npm](https://img.shields.io/npm/v/common-log-format.svg)](https://www.npmjs.org/package/common-log-format)
-[![npm module downloads](https://img.shields.io/npm/dt/common-log-format.svg)](https://www.npmjs.org/package/common-log-format)
-[![Build Status](https://travis-ci.org/75lb/common-log-format.svg?branch=master)](https://travis-ci.org/75lb/common-log-format)
-[![Dependency Status](https://badgen.net/david/dep/75lb/common-log-format)](https://david-dm.org/75lb/common-log-format)
+[![view on npm](https://badgen.net/npm/v/common-log-format)](https://www.npmjs.org/package/common-log-format)
+[![npm module downloads](https://badgen.net/npm/dt/common-log-format)](https://www.npmjs.org/package/common-log-format)
+[![Gihub repo dependents](https://badgen.net/github/dependents-repo/75lb/common-log-format)](https://github.com/75lb/common-log-format/network/dependents?dependent_type=REPOSITORY)
+[![Gihub package dependents](https://badgen.net/github/dependents-pkg/75lb/common-log-format)](https://github.com/75lb/common-log-format/network/dependents?dependent_type=PACKAGE)
+[![Node.js CI](https://github.com/75lb/common-log-format/actions/workflows/node.js.yml/badge.svg)](https://github.com/75lb/common-log-format/actions/workflows/node.js.yml)
+[![Coverage Status](https://coveralls.io/repos/github/75lb/common-log-format/badge.svg)](https://coveralls.io/github/75lb/common-log-format)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 # common-log-format
 
-Pipe in [common log format](http://en.wikipedia.org/wiki/Common_Log_Format), get JSON out. Useful for converting web logs into a format more readily consumed by Javascript.
+Pipe [common log format](http://en.wikipedia.org/wiki/Common_Log_Format) in, get JSON out. Useful for converting web logs into a format more easily consumed by Javascript.
 
 Standard log input such as:
 
@@ -16,6 +18,7 @@ Standard log input such as:
 ```
 
 would be converted to
+
 ```json
 {
   "remoteHost": "127.0.0.1",
@@ -46,7 +49,8 @@ $ npm install common-log-format
 ```
 
 ```js
-const clf = require('common-log-format')
+import clf from 'common-log-format'
+
 process.stdin.pipe(clf()).pipe(process.stdout)
 ```
 
@@ -65,4 +69,4 @@ $ cat my-web-log.txt | clf
 
 * * *
 
-&copy; 2015-2019 Lloyd Brookes \<75pound@gmail.com\>.
+&copy; 2015-2022 Lloyd Brookes \<75pound@gmail.com\>.

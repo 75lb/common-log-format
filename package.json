@@ -3,11 +3,12 @@
   "author": "Lloyd Brookes <75pound@gmail.com>",
   "version": "1.0.0",
   "description": "Transform web logs (common log format) to JSON",
-  "repository": "https://github.com/75lb/common-log-format.git",
+  "repository": "https://github.com/75lb/common-log-format",
   "license": "MIT",
   "bin": {
     "clf": "bin/cli.js"
   },
+  "exports": "./index.js",
   "keywords": [
     "common",
     "log",
@@ -18,14 +19,14 @@
     "transform"
   ],
   "engines": {
-    "node": ">=8"
+    "node": ">=12"
   },
   "scripts": {
     "test": "test-runner test.js"
   },
   "devDependencies": {
-    "sleep-anywhere": "^1.1.2",
-    "test-runner": "^0.6.0"
+    "sleep-anywhere": "^2.1.0",
+    "test-runner": "^0.10.1"
   },
   "files": [
     "index.js",

@@ -1,6 +1,6 @@
 const Tom = require('test-runner').Tom
-const Clf = require('./')
-const a = require('assert')
+const Clf = require('common-log-format')
+const a = require('assert').strict
 const sleep = require('sleep-anywhere')
 
 const tom = module.exports = new Tom('clf')
@@ -14,7 +14,7 @@ tom.test('one write', async function () {
   })
   transform.write('127.0.0.1 - - [Wed, 11 Jun 2014 15:51:48 GMT] "GET /package.json HTTP/1.1" 200 733 "http://localhost:8000/" "userAgent"')
   await sleep(10)
-  a.deepStrictEqual(actuals, [
+  a.deepEqual(actuals, [
     {
       remoteHost: '127.0.0.1',
       remoteLogName: '-',
@@ -37,7 +37,7 @@ tom.test('two writes', async function () {
   transform.write('127.0.0.1 - - [Wed, 11 Jun 2014 15:51:48 GMT] "GET /package.json HTTP/1.1" 200 733 "http://localhost:8000/" "userAgent"')
   transform.write('127.0.0.2 - - [Wed, 11 Jun 2014 15:51:48 GMT] "GET /package.json HTTP/1.1" 200 733 "http://localhost:8000/" "userAgent"')
   await sleep(10)
-  a.deepStrictEqual(actuals.join(''), '{"remoteHost":"127.0.0.1","remoteLogName":"-","authUser":"-","date":"2014-06-11T15:51:48.000Z","request":"GET /package.json HTTP/1.1","status":200,"bytes":733}{"remoteHost":"127.0.0.2","remoteLogName":"-","authUser":"-","date":"2014-06-11T15:51:48.000Z","request":"GET /package.json HTTP/1.1","status":200,"bytes":733}')
+  a.deepEqual(actuals.join(''), '{"remoteHost":"127.0.0.1","remoteLogName":"-","authUser":"-","date":"2014-06-11T15:51:48.000Z","request":"GET /package.json HTTP/1.1","status":200,"bytes":733}{"remoteHost":"127.0.0.2","remoteLogName":"-","authUser":"-","date":"2014-06-11T15:51:48.000Z","request":"GET /package.json HTTP/1.1","status":200,"bytes":733}')
 })
 
 tom.test('non-numeric bytes', async function () {
@@ -49,7 +49,7 @@ tom.test('non-numeric bytes', async function () {
   })
   transform.write('127.0.0.1 - - [Wed, 11 Jun 2014 15:51:48 GMT] "GET /package.json HTTP/1.1" 200 - "http://localhost:8000/" "userAgent"')
   await sleep(10)
-  a.deepStrictEqual(actuals, [
+  a.deepEqual(actuals, [
     {
       remoteHost: '127.0.0.1',
       remoteLogName: '-',
