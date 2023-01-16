@@ -68,4 +68,4 @@ $ cat my-web-log.txt | clf
 
 * * *
 
-&copy; 2015-2022 Lloyd Brookes \<75pound@gmail.com\>.
+&copy; 2015-2023 Lloyd Brookes \<75pound@gmail.com\>.

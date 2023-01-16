@@ -25,7 +25,7 @@
     "test": "test-runner test.js"
   },
   "devDependencies": {
-    "sleep-anywhere": "^2.1.0",
+    "sleep-anywhere": "^2.1.1",
     "test-runner": "^0.10.1"
   },
   "files": [
